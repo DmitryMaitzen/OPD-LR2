@@ -165,7 +165,7 @@ def main():
         else:
             if is_natural(message.text):
                 tracking_time, time_passed = int(message.text), 0
-                global upper_limit, lower_limit, delay_time  # Попробовать убрать эту строчку.
+                global upper_limit, lower_limit, delay_time
                 bot.send_message(message.chat.id, "Отслеживание запущено.")
                 while time_passed <= tracking_time:
                     current_rate = get_current_rate()
